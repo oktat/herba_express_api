@@ -1,6 +1,6 @@
-# sip expressapi sabon
+# herba
 
-Express based REST API sablon
+Herba Express based REST API
 
 ## Install
 
