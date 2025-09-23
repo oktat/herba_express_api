@@ -30,6 +30,42 @@ All endpoint have a /api prefix.
 | /login    | POST  | no |  login  |
 | /users    | GET   | yes |  read users |
 
+### Herbs
+
+| Endpoint | Method | Auth | Description |
+|-|-|-|-|
+| GET | /api/herbs | Yes | Get all herbs |
+| GET | /api/herbs/:id | Yes | Get a herb |
+| POST | /api/herbs | Yes | Create a herb |
+| PUT | /api/herbs/:id | Yes | Update a herb |
+| DELETE | /api/herbs/:id | Yes | Delete a herb |
+
+### Medicinals
+
+| Endpoint | Method | Auth | Description |
+|-|-|-|-|
+| GET | /api/medicinals | Yes | Get all medicinals |
+| GET | /api/medicinals/:id | Yes | Get a medicinal |
+| POST | /api/medicinals | Yes | Create a medicinal |
+| PUT | /api/medicinals/:id | Yes | Update a medicinal |
+| DELETE | /api/medicinals/:id | Yes | Delete a medicinal |
+
+### Herbmeds
+
+| Endpoint | Method | Auth | Description |
+|-|-|-|-|
+| GET | /api/herbmeds | Yes | Get all herbmeds |
+| POST | /api/herbmeds | Yes | Create a herbmed |
+| DELETE | /api/herbmeds/:id | Yes | Delete a herbmed |
+
+For example:
+
+```bash
+res post localhost:8000/api/herbs name=növény1
+res post localhost:8000/api/medicinals name=hatás1
+res post localhost:8000/api/herbmeds/1/1
+```
+
 ## The register endpoint
 
 ```json
