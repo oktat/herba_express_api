@@ -111,3 +111,49 @@ If the CSV file contains quotation marks, they are automatically removed.
 May be freely distributed under the MIT license.
 
 Copyright (c) 2023 Sallai András
+
+## Endpoints
+
+### Users
+
+| Endpoint | Method | Auth | Description |
+|-|-|-|-|
+| POST | /api/register | No | Register a user |
+| POST | /api/login | No | Login a user |
+| GET | /api/users | Yes | Get all users |
+
+### Herbs
+
+| Endpoint | Method | Auth | Description |
+|-|-|-|-|
+| GET | /api/herbs | Yes | Get all herbs |
+| GET | /api/herbs/:id | Yes | Get a herb |
+| POST | /api/herbs | Yes | Create a herb |
+| PUT | /api/herbs/:id | Yes | Update a herb |
+| DELETE | /api/herbs/:id | Yes | Delete a herb |
+
+### Medicinals
+
+| Endpoint | Method | Auth | Description |
+|-|-|-|-|
+| GET | /api/medicinals | Yes | Get all medicinals |
+| GET | /api/medicinals/:id | Yes | Get a medicinal |
+| POST | /api/medicinals | Yes | Create a medicinal |
+| PUT | /api/medicinals/:id | Yes | Update a medicinal |
+| DELETE | /api/medicinals/:id | Yes | Delete a medicinal |
+
+### Herbmeds
+
+| Endpoint | Method | Auth | Description |
+|-|-|-|-|
+| GET | /api/herbmeds | Yes | Get all herbmeds |
+| POST | /api/herbmeds | Yes | Create a herbmed |
+| DELETE | /api/herbmeds/:id | Yes | Delete a herbmed |
+
+For example:
+
+```bash
+res post localhost:8000/api/herbs name=növény1
+res post localhost:8000/api/medicinals name=hatás1
+res post localhost:8000/api/herbmeds/1/1
+```
