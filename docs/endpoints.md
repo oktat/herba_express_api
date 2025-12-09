@@ -1,26 +1,4 @@
-# User documentation
-
-## Install dependencies
-
-```cmd
-npm install
-```
-
-## Copy config file
-
-Copy **config/default.json.example** to **config/default.json** file.
-
-## App key generation
-
-```cmd
-node op key:generate
-```
-
-## Database setup
-
-Edit the config/default.json file.
-
-## Endpoints
+# Endpoints
 
 All endpoint have a /api prefix.
 
@@ -30,7 +8,7 @@ All endpoint have a /api prefix.
 | /login    | POST  | no |  login  |
 | /users    | GET   | yes |  read users |
 
-### Herbs
+## Herbs
 
 | Endpoint | Method | Auth | Description |
 |-|-|-|-|
@@ -40,14 +18,14 @@ All endpoint have a /api prefix.
 | PUT | /api/herbs/:id | Yes | Update a herb |
 | DELETE | /api/herbs/:id | Yes | Delete a herb |
 
-#### Fields of the herbs table
+### Fields of the herbs table
 
 | Field | Type | Description |
 |---|---|---|
 | id | int | identifier |
 | name | string | Nem of the herb |
 
-### Medicinals
+## Medicinals
 
 | Endpoint | Method | Auth | Description |
 |-|-|-|-|
@@ -57,7 +35,7 @@ All endpoint have a /api prefix.
 | PUT | /api/medicinals/:id | Yes | Update a medicinal |
 | DELETE | /api/medicinals/:id | Yes | Delete a medicinal |
 
-#### Fields of the medicinals table
+### Fields of the medicinals table
 
 | Field | Type | Description |
 |---|---|---|
@@ -72,7 +50,7 @@ All endpoint have a /api prefix.
 | POST | /api/herbmeds | Yes | Create a herbmed |
 | DELETE | /api/herbmeds/:id | Yes | Delete a herbmed |
 
-#### Fields of the herb_med table
+### Fields of the herb_med table
 
 | Field | Type | Description |
 |---|---|---|
@@ -85,37 +63,4 @@ For example:
 res post localhost:8000/api/herbs name=növény1
 res post localhost:8000/api/medicinals name=hatás1
 res post localhost:8000/api/herbmeds/1/1
-```
-
-## The register endpoint
-
-```json
-{
-    "name": "joe",
-    "email": "joe@green.lan",
-    "password": "secret",
-    "password_confirmation": "secret"
-}
-```
-
-## The login endpoint
-
-```json
-{
-    "name": "joe",
-    "password": "secret"
-}
-```
-
-You receive the bearear token with accessToken key.
-
-## The users endpoint
-
-Send the bearer token.
-
-## Model and controller generation
-
-```cmd
-node op create model thing
-node op create controller thing
 ```
